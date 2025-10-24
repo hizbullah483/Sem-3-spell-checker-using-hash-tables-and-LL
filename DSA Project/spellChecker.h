@@ -12,7 +12,7 @@ class spellChecker{
     public:
     spellChecker(string dictionarytextFile);
     void checkSentence(const string &sentence);
-    string lowerWord(const string &word);
+    string lowerAndCleanWord(const string &word);
     bool checkWord(const string& word);
    
     
