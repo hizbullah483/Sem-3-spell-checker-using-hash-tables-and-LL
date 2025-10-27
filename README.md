@@ -13,7 +13,7 @@ false negative prevention by using tolower and isalpha
 
 TO BE ADDED:
 
-a recommendation feature for misspelled words (do you mean: ...) via either BK trees or B trees
+a recommendation feature for misspelled words (do you mean: ...) via BK trees 
 
 allow users to replace specific words with one of the recommended ones
 
