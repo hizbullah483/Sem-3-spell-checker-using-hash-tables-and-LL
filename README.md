@@ -10,6 +10,8 @@ functions that can take whole sentences (to be implemented in main)
 
 false negative prevention by using tolower and isalpha
 
+edit distance function which will act as core mechanic for recommendation feature
+
 
 TO BE ADDED:
 
