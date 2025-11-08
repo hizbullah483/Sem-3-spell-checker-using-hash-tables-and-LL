@@ -1,5 +1,12 @@
 # Sem-3-spell-checker-using-hash-tables-and-LL
 
+COPY PASTE THIS INTO TERMINAL FOR EXECUTION
+
+g++ main.cpp hashTable.cpp spellChecker.cpp -o main
+
+./main
+
+
 FEATURES IMPLEMENTED:
 
 dictionary loaded into hash tables
