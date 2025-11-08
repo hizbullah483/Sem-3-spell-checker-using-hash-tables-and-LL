@@ -3,7 +3,6 @@
 COPY PASTE THIS INTO TERMINAL FOR EXECUTION
 
 g++ main.cpp hashTable.cpp spellChecker.cpp -o main
-
 ./main
 
 
