@@ -12,22 +12,20 @@ dictionary loaded into hash tables
 
 collisions handled via linked lists
 
-functions that can take whole sentences (to be implemented in main)
+functions that can take whole sentences 
 
 false negative prevention by using tolower and isalpha
 
-edit distance function which will act as core mechanic for recommendation feature
+edit distance function which acts as core mechanic for recommendation feature
 
+a recommendation feature for misspelled words (do you mean: ...) 
 
 TO BE ADDED:
 
-a recommendation feature for misspelled words (do you mean: ...) via BK trees 
+
 
 allow users to replace specific words with one of the recommended ones
 
-
-FOR EXTRA CREDIT:
-
 could also read a text file
 
-can give % match. example: misspelled word is appel. do you mean: apple (90%), application (50%)
+
