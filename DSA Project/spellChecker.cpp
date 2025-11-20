@@ -2,6 +2,7 @@
 #include<sstream>
 #include<cctype>
 #include<fstream>
+#include<limits> //bad user input handled
 #include "spellChecker.h"
 
 
@@ -104,14 +105,22 @@ void spellChecker::printRecommendedWords(vector<string> misspelled){
         cout<<singleRecommendation;
     }
 
-    char choice;
+    string choice;
     while(true){ 
         cout<<"\ndo you want to see more recommendations? y/n: ";
-        cin>>choice;
-        if(choice == 'n') break;
+        while (!(cin >> choice) || (choice != "y" && choice != "n")){
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout << "Please enter only y or n ";
+        }
+        if(choice == "n") break;
         int num;
         cout<<"for which word do you want to see recommendations for (enter number): ";
-        cin>>num;
+        while (!(cin >> num)){  
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout << "Invalid. Enter a valid number: ";
+        }
 
         if(num < 1 || num > misspelled.size()){
             cout<<"invalid number.\n";
