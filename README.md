@@ -20,7 +20,9 @@ edit distance function which acts as core mechanic for recommendation feature
 
 a recommendation feature for misspelled words (do you mean: ...) 
 
-TO BE ADDED:
+UPDATES
+
+got rid of dupes in recommendation
 
 
 
