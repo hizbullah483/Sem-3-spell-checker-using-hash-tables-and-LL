@@ -24,6 +24,8 @@ UPDATES
 
 got rid of dupes in recommendation
 
+can now process whole files too
+
 
 
 allow users to replace specific words with one of the recommended ones
