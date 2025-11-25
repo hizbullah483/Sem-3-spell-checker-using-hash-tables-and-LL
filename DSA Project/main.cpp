@@ -17,7 +17,7 @@ int main() {
     s.loadDictinSpellChecker("Dictionary.txt");
 
     while (true){
-        cout << "1 Terminal spell checking\n";
+        cout << "\n1 Terminal spell checking\n";
         cout << "2 File spell checking\n";
         cout<<"3 to exit\n";
 
