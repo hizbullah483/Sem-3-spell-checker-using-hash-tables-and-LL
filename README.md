@@ -22,14 +22,11 @@ a recommendation feature for misspelled words (do you mean: ...)
 
 UPDATES
 
-got rid of dupes in recommendation
+1.got rid of dupes in recommendation
 
-can now process whole files too
+2.can now process whole files too
 
+3. massive optimization by ignoring dict words with length > 2 of the misspelled word
 
-
-allow users to replace specific words with one of the recommended ones
-
-could also read a text file
 
 
