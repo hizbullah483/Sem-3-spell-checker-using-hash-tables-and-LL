@@ -43,7 +43,7 @@ int main() {
             s.checkfile(filename);
         } 
         else if(choice == 3){
-            cout << "Exiting program.\n";
+            cout << "terminated\n";
             break;
         } 
         else{
