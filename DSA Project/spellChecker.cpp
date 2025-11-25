@@ -97,6 +97,8 @@ void spellChecker::printRecommendedWords(vector<string> misspelled){
         int minDistance = 999;
         for(int j = 0; j < dictWords.size(); j++){
             if(dictWords[j] == misspelled[i]) continue;
+            //OPTIMIZATION!!!!!
+            if (dictWords[j].size() - misspelled[i].size() > 2) continue;
             int distance = editdistance(dictWords[j], misspelled[i]);
             if(distance < minDistance){
                 singleRecommendation = dictWords[j];
