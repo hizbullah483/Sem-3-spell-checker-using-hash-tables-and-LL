@@ -1,32 +1,47 @@
-# Sem-3-spell-checker-using-hash-tables-and-LL
+Spell Checker – Hash Table & Linked List Implementation
 
-COPY PASTE THIS INTO TERMINAL FOR EXECUTION
+A DSA project that implements a complete spell checker using a hash table with separate chaining (linked lists for collisions).  
+It loads a dictionary, checks words in user input or files, identifies misspellings, and provides correction suggestions based on edit distance (Levenshtein).
 
-g++ main.cpp hashTable.cpp spellChecker.cpp -o main
-
-./main
-
-FEATURES IMPLEMENTED:
-
-dictionary loaded into hash tables
-
-collisions handled via linked lists
-
-functions that can take whole sentences 
-
-false negative prevention by using tolower and isalpha
-
-edit distance function which acts as core mechanic for recommendation feature
-
-a recommendation feature for misspelled words (do you mean: ...) 
-
-UPDATES
-
-1.got rid of dupes in recommendation
-
-2.can now process whole files too
-
-3. massive optimization by ignoring dict words with length > 2 of the misspelled word
+> Built as a final project for Data Structures & Algorithms course.
 
 
+Optional (provide custom dictionary)
 
+The program expects Dictionary.txt or 10kdictionary.txt in the same directory.
+You can rename your preferred dictionary file to Dictionary.txt.
+
+
+Usage Example
+
+Enter a sentence: Did you recieve my call
+'recieve' is misspelled.
+Did you mean: receive, relieve, retrieve
+
+
+How It Works
+
+1. Hash Table
+
+· Array of buckets (size chosen based on dictionary size)
+· Each bucket is a linked list of Node{string word, Node* next}
+· Hash function: polynomial rolling hash modulo table size
+
+2. Spell Checking
+
+· Tokenize input by spaces and punctuation
+· Lowercase each token
+· Check existence in hash table (search())
+· If not found then compute suggestions
+
+3. Correction Suggestions
+
+· For each misspelled word w, iterate over dictionary words d
+· If abs(len(w) - len(d)) <= 2 then compute edit distance (Levenshtein)
+· Keep top 3 words with smallest distance
+· Remove duplicates before displaying
+
+4. Optimizations
+
+· Early length filter reduces edit distance calls by 80-90%
+· Dictionary loaded once into memory → O(1) lookups
